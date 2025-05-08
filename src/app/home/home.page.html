@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba 1 - Angel Maldonado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- 
+  <ion-list>
+    <ion-item *ngFor="let msg of messages">
+      <ion-label>
+        <h3>{{ msg.sender }}</h3>
+        <p>{{ msg.text }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  -->
+  <ion-toolbar>
+    <h4>Nombre</h4>
+    <ion-input [(ngModel)]="nombre" placeholder="Escribe tu nombre" fill="outline"></ion-input>
+    <h4>Apellido</h4>
+    <ion-input [(ngModel)]="apellido" placeholder="Escribe tu apellido" fill="outline"></ion-input>
+    <h4>Username</h4>
+    <ion-input [(ngModel)]="username" placeholder="Escribe tu username" fill="outline"></ion-input>
+    <h4>Correo</h4>
+    <ion-input type="email" [(ngModel)]="correo" placeholder="Escribe tu correo" fill="outline"></ion-input>
+
+    <h4>Rol</h4>
+    <select [(ngModel)]="rol" fill="outline" name="Rol" placeholder="Selecciona tu rol">
+      <option value="administrador">Administrador</option>
+      <option value="gerente">Gerente</option>
+      <option value="cliente">Cliente</option>
+    </select>
+    
+    <h4>Género</h4>
+    <div>
+      <input type="radio" [(ngModel)]="genero" value="Masculino" checked />
+      <label for="huey">Masculino</label>
+      <input type="radio" [(ngModel)]="genero" value="huey" checked />
+      <label for="huey">Femenino</label>
+    </div>
+    
+    <h4>Edad</h4>
+    <ion-input [(ngModel)]="edad" placeholder="Escribe tu edad" fill="outline"></ion-input>
+
+    <h4>Fecha de Nacimiento</h4>
+    <ion-input type="date" [(ngModel)]="fechaDeNacimiento" placeholder="Selecciona tu fecha de nacimiento" fill="outline"></ion-input>
+
+    <h4>Pais</h4>
+    <ion-input [(ngModel)]="pais" placeholder="Ingresa tu país" fill="outline"></ion-input>
+
+    <h4>Mensaje</h4>
+    <ion-input [(ngModel)]="mensaje" placeholder="Escribe un mensaje" fill="outline"></ion-input>
+
+    <h4>Postre</h4>
+    <ion-input [(ngModel)]="postre" placeholder="Escribe el nombre de un postre" fill="outline"></ion-input>
+
+    <ion-button expand="block" (click)="sendContent()">Enviar</ion-button>
+  </ion-toolbar>
+
+
+</ion-content>
